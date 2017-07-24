@@ -29,7 +29,7 @@ include 'koneksi.php';
 
           <div class="form-group" style="padding-bottom: 20px;">
           	<label for="total_kas">Edit</label>
-			      <input type="number" name="total_kas"  class="form-control"/>
+			      <input type="number" name="total_kas"  class="form-control" value="<?php echo $r['total_kas'];?>" />
           </div>
 
           <div class="modal-footer">
