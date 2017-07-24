@@ -8,13 +8,14 @@
 
     <!-- css load source -->
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery.dataTables.min.css">
 
     <!-- js load source -->
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-1.12.4"></script>
     <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
   </head>
   <body>
@@ -26,7 +27,7 @@
         <a href="#" class="btn btn-info" data-target="#KasAdd" data-toggle="modal">Add</a>
       </p>
 
-      <table id="dataTabel" class="display table table-bordered">
+      <table id="dataTabel" class="table table-bordered">
         <thead>
           <th>No</th>
           <th>Nama</th>
@@ -49,9 +50,15 @@
            <td><?php echo $r['nim']; ?></td>
            <td><?php echo $r['total_kas']; ?></td>
            <td>
-             <a href="#" class="open_modal" id="<?php echo $r['id'];?>">Edit</a>
-             <a href="#" onclick="confirm_modal('p_delete.php?&id=<?php echo $r['id'];?>');">Delete</a>
-             <a href="#" class="add_modal" id="<?php echo $r['id'];?>">Tambah</a>
+             <a href="#" class="open_modal" id="<?php echo $r['id'];?>">
+               <span class="btn btn-info glyphicon glyphicon-pencil" aria-hidden="true"></span>
+             </a>
+             <a href="#" onclick="confirm_modal('p_delete.php?&id=<?php echo $r['id'];?>');">
+               <span class="btn btn-danger glyphicon glyphicon-trash" aria-hidden="true"></span>
+             </a>
+             <a href="#" class="add_modal" id="<?php echo $r['id'];?>">
+               <span class="btn btn-success glyphicon glyphicon-plus" aria-hidden="true"></span>
+             </a>
            </td>
          </tr>
          <?php } ?>
