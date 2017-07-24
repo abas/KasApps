@@ -8,10 +8,13 @@
 
     <!-- css load source -->
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/jquery.dataTables.min.css">
 
     <!-- js load source -->
-    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-1.12.4"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
 
   </head>
   <body>
@@ -23,7 +26,7 @@
         <a href="#" class="btn btn-info" data-target="#KasAdd" data-toggle="modal">Add</a>
       </p>
 
-      <table id="mytable" class="table table-bordered">
+      <table id="dataTabel" class="display table table-bordered">
         <thead>
           <th>No</th>
           <th>Nama</th>
@@ -110,6 +113,10 @@
     </div>
     <!-- type script -->
     <script type="text/javascript">
+      $(document).ready(function() {
+          $('#dataTabel').DataTable();
+      } );
+
       $(document).ready(function () {
       $(".open_modal").click(function(e) {
          var m = $(this).attr("id");
@@ -124,9 +131,7 @@
              });
            });
          });
-    </script>
 
-    <script type="text/javascript">
       $(document).ready(function () {
       $(".add_modal").click(function(e) {
          var m = $(this).attr("id");
@@ -141,9 +146,7 @@
              });
            });
          });
-    </script>
 
-    <script type="text/javascript">
       function confirm_modal(delete_url){
         $('#delete').modal('show',{backdrop:'static'});
         document.getElementById('delete_link').setAttribute('href',delete_url);
