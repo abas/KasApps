@@ -28,8 +28,8 @@ include 'koneksi.php';
           </div>
 
           <div class="form-group" style="padding-bottom: 20px;">
-          	<label for="total_kas">Tambah Berapa?</label>
-			      <input type="number" name="total_kas"  class="form-control" placeholder="0" value="<?php echo $r['total_kas'];?>"/>
+          	<label for="total_kas">Total saat ini</label>
+			      <input type="number" name="total_kas" disabled class="form-control" placeholder="0" value="<?php echo $r['total_kas'];?>"/>
           </div>
 
           <div class="form-group" style="padding-bottom: 20px;">

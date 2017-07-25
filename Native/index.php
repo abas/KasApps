@@ -21,14 +21,14 @@
   <body>
     <div class="container">
       <h2>Kas Apps</h2>
-      <p>with <b>Query</b> loaded</p>
+      <p>aplikasi kas simple</p>
 
       <p>
         <a href="#" class="btn btn-info" data-target="#KasAdd" data-toggle="modal">Add</a>
       </p>
 
-      <table id="dataTabel" class="table table-bordered">
-        <thead>
+      <table id="dataTabel" class="table table-hover table-striped" >
+        <thead class="alert-success">
           <th>No</th>
           <th>Nama</th>
           <th>Nim</th>
